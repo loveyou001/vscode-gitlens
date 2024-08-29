@@ -116,7 +116,7 @@ export class GitCommandsCommand extends Command {
 	protected override preExecute(context: CommandContext, args?: GitCommandsCommandArgsWithCompletion) {
 		switch (context.command) {
 			case Commands.GitCommandsBranch:
-				args = { command: 'branch' };
+				args = { command: 'branch', ...args };
 				break;
 			case Commands.GitCommandsBranchCreate:
 				args = { command: 'branch', state: { subcommand: 'create' } };

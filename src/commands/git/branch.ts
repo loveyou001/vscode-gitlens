@@ -153,6 +153,10 @@ export class BranchGitCommand extends QuickCommand {
 
 			switch (args?.state.subcommand) {
 				case 'create':
+					if (args.state.flags != null) {
+						counter++;
+					}
+
 					if (args.state.reference != null) {
 						counter++;
 					}
