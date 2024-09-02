@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+### Added
+
+- Adds monospace formatting in commit messages &mdash; closes [#2350](https://github.com/gitkraken/vscode-gitlens/issues/2350)
+
 ### Fixed
 
 - Fixes [#3582](https://github.com/gitkraken/vscode-gitlens/issues/3582) - "Delete Branch" option is sometimes unexpectedly missing
