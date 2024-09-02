@@ -7,10 +7,10 @@ import { defer } from '../system/promise';
 
 export async function executeGitCommand(args: GitCommandsCommandArgs): Promise<void> {
 	const deferred = defer<void>();
-	void (await executeCommand<GitCommandsCommandArgsWithCompletion>(Commands.GitCommands, {
+	await executeCommand<GitCommandsCommandArgsWithCompletion>(Commands.GitCommands, {
 		...args,
 		completion: deferred,
-	}));
+	});
 	return deferred.promise;
 }
 
