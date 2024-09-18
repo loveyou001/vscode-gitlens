@@ -17,7 +17,6 @@ import { formatPath } from '../../system/formatPath';
 import { Logger } from '../../system/logger';
 import { pad } from '../../system/string';
 import type { ViewsWithRepositoryFolders } from '../../views/viewBase';
-import { getSteps } from '../gitCommands.utils';
 import type {
 	AsyncStepResultGenerator,
 	PartialStepState,
@@ -39,6 +38,7 @@ import {
 } from '../quickCommand';
 import { RevealInSideBarQuickInputButton, ShowDetailsViewQuickInputButton } from '../quickCommand.buttons';
 import { appendReposToTitle, pickRepositoryStep, pickStashesStep, pickStashStep } from '../quickCommand.steps';
+import { getSteps } from '../quickWizard.utils';
 
 interface Context {
 	repos: Repository[];

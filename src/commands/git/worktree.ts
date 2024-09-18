@@ -39,7 +39,6 @@ import type { Deferred } from '../../system/promise';
 import { pluralize, truncateLeft } from '../../system/string';
 import { getWorkspaceFriendlyPath, openWorkspace, revealInFileExplorer } from '../../system/utils';
 import type { ViewsWithRepositoryFolders } from '../../views/viewBase';
-import { getSteps } from '../gitCommands.utils';
 import type {
 	AsyncStepResultGenerator,
 	CustomStep,
@@ -69,6 +68,7 @@ import {
 	pickWorktreesStep,
 	pickWorktreeStep,
 } from '../quickCommand.steps';
+import { getSteps } from '../quickWizard.utils';
 
 interface Context {
 	repos: Repository[];
